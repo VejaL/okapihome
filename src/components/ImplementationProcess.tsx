@@ -3,24 +3,39 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function ImplementationProcess() {
   return (
-    <section className="py-20 border-t border-neutral-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle label="導入までの流れ" />
-        <ol className="grid gap-6 md:grid-cols-4 text-sm">
-          {IMPLEMENTATION_STEPS.map((s, idx) => (
-            <li key={s.title} className="flex flex-col gap-3">
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900 text-white text-sm font-semibold">
-                  {idx + 1}
-                </div>
-                <h3 className="font-medium text-neutral-900">{s.title}</h3>
-              </div>
-              <p className="text-xs text-neutral-600 leading-relaxed">
-                {s.body}
-              </p>
-            </li>
+    <section id="process" className="py-24 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionTitle label="Process" eyebrow="導入プロセス" />
+
+        <div className="grid md:grid-cols-4 gap-4 relative">
+          {/* Connector Line (Desktop) */}
+          <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-0.5 bg-neutral-200 z-0" />
+
+          {IMPLEMENTATION_STEPS.map((step, i) => (
+            <div key={i} className="relative z-10 flex flex-col md:items-center">
+               {/* Step Circle */}
+               <div className="w-14 h-14 rounded-full bg-white border-2 border-[#1EB980] flex items-center justify-center text-[#1EB980] font-bold shadow-sm mb-6 shrink-0">
+                 {i + 1}
+               </div>
+               
+               <div className="md:text-center">
+                 <p className="text-xs font-bold text-[#1EB980] uppercase tracking-wider mb-1">
+                   {step.step}
+                 </p>
+                 <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">
+                   {step.title}
+                 </h3>
+                 <p className="text-sm font-medium text-[#6B6B6B]">
+                   {step.duration}
+                 </p>
+               </div>
+            </div>
           ))}
-        </ol>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-[#1A1A1A] font-bold">最短1ヶ月で利用開始できます。</p>
+        </div>
       </div>
     </section>
   );

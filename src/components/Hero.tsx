@@ -1,92 +1,109 @@
 import Link from "next/link";
 import { HERO_CONTENT } from "@/data/landing-page";
-import { Badge } from "@/components/ui/Badge";
-import { StepRow } from "@/components/ui/StepRow";
 
 export function Hero() {
   return (
-    <section
-      aria-labelledby="hero-heading"
-      className="relative pt-[calc(var(--header-height)+64px)] pb-24"
-    >
-      {/* 背景环形装饰 */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 left-1/2 opacity-40">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(15,23,42,0.06)_0,_transparent_60%)]" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col gap-12 lg:flex-row lg:items-center">
-        {/* 文案 */}
-        <div className="flex-1 space-y-6">
-          <h1
-            id="hero-heading"
-            className="text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-900"
-          >
-            {HERO_CONTENT.title}
-          </h1>
-          <p className="max-w-xl text-sm sm:text-base text-neutral-600 leading-relaxed">
-            {HERO_CONTENT.description}
-          </p>
-
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href={HERO_CONTENT.cta.primary.href}
-              className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white hover:bg-neutral-800 transition-colors"
-            >
-              {HERO_CONTENT.cta.primary.label}
-            </Link>
-            <Link
-              href={HERO_CONTENT.cta.secondary.href}
-              className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium text-neutral-800 hover:bg-neutral-100 transition-colors"
-            >
-              {HERO_CONTENT.cta.secondary.label}
-            </Link>
+    <section className="relative pt-[calc(var(--header-height)+80px)] pb-24 lg:pt-[calc(var(--header-height)+100px)] lg:pb-32 bg-[#FAFAFA] overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Text Content */}
+          <div className="max-w-2xl space-y-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1A1A1A] leading-[1.15]">
+              {HERO_CONTENT.title}
+            </h1>
+            <p className="text-lg text-[#6B6B6B] leading-relaxed">
+              {HERO_CONTENT.subtitle}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link
+                href={HERO_CONTENT.cta.primary.href}
+                className="inline-flex items-center justify-center rounded-lg bg-[#1A1A1A] px-8 py-4 text-base font-bold text-white hover:bg-neutral-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              >
+                {HERO_CONTENT.cta.primary.label}
+              </Link>
+            </div>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-4 text-xs text-neutral-500">
-            {HERO_CONTENT.features.map((feature, i) => (
-              <span key={i}>{feature}</span>
-            ))}
+          {/* Abstract Visual / Animation Placeholder */}
+          <div className="relative aspect-square lg:aspect-[4/3] rounded-3xl bg-gradient-to-br from-[#1EB980]/10 to-[#0041C4]/10 border border-neutral-200 flex items-center justify-center">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_white_0,_transparent_70%)] opacity-50" />
+            <div className="relative z-10 text-center space-y-4 p-8">
+              <div className="inline-block p-4 rounded-2xl bg-white shadow-xl mb-4">
+                <span className="text-4xl">🤖</span>
+              </div>
+              <p className="font-bold text-[#1A1A1A] text-xl">AI Agent Working...</p>
+              <div className="flex gap-2 justify-center text-xs text-[#6B6B6B]">
+                <span className="bg-white px-3 py-1 rounded-full shadow-sm border border-neutral-100">Analyzing</span>
+                <span className="bg-white px-3 py-1 rounded-full shadow-sm border border-neutral-100">Planning</span>
+                <span className="bg-white px-3 py-1 rounded-full shadow-sm border border-neutral-100">Executing</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* 右侧 mock UI 卡片 */}
-        <div className="flex-1">
-          <div className="mx-auto max-w-md rounded-[32px] bg-neutral-900 p-5 text-sm text-neutral-100 shadow-2xl">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-medium text-neutral-300">
-                Enterprise AI Agent Console
-              </span>
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
-            </div>
-            <div className="space-y-3">
-              <div className="rounded-2xl bg-neutral-800/80 p-3">
-                <div className="text-xs text-neutral-400 mb-1">
-                  ナレッジソース
+        {/* Challenges Section */}
+        <div className="mt-24">
+          <p className="text-center text-sm font-bold text-[#6B6B6B] tracking-wider uppercase mb-8">
+            ビジネス現場が直面する3つの課題
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {HERO_CONTENT.challenges.map((challenge, i) => (
+              <div
+                key={i}
+                className="bg-neutral-100 rounded-2xl p-6 border border-neutral-200 text-neutral-400"
+              >
+                <div className="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500 font-bold mb-4">
+                  {i + 1}
                 </div>
-                <div className="flex flex-wrap gap-2 text-xs">
-                  <Badge>社内 Wiki</Badge>
-                  <Badge>FAQ PDF</Badge>
-                  <Badge>CRM データ</Badge>
-                </div>
-              </div>
-              <div className="rounded-2xl bg-neutral-800/80 p-3 space-y-2">
-                <div className="flex items-center justify-between text-xs text-neutral-400">
-                  <span>エージェント・フロー</span>
-                  <span>3 steps</span>
-                </div>
-                <StepRow step="1" label="意図の解析 &amp; 権限チェック" />
-                <StepRow step="2" label="関連ドキュメントの検索 / RAG" />
-                <StepRow step="3" label="回答生成 &amp; ログ保存" />
-              </div>
-              <div className="rounded-2xl bg-neutral-100 text-neutral-900 p-3 mt-2">
-                <div className="text-xs text-neutral-500 mb-1">
-                  Chat with knowledge
-                </div>
-                <p className="text-xs">
-                  「3 月の請求書テンプレート」を Slack で聞かれたとき、権限制御された
-                  AI エージェントが自動で回答します。
+                <h3 className="font-bold text-neutral-500 text-lg mb-2">
+                  {challenge.title}
+                </h3>
+                <p className="text-sm text-neutral-500 leading-relaxed">
+                  {challenge.description}
                 </p>
               </div>
+            ))}
+          </div>
+
+          {/* Generic AI Package Difficulties */}
+          <p className="text-center text-sm font-bold text-[#6B6B6B] tracking-wider uppercase mb-8 mt-14">
+            汎用AIパッケージ導入の3つの困難
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-red-50 rounded-2xl p-6 border border-red-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white font-bold mb-4">
+                1
+              </div>
+              <h3 className="font-bold text-red-900 text-lg mb-2">
+                自社フローに直接組み込めない
+              </h3>
+              <p className="text-sm text-red-900/80 leading-relaxed">
+                パッケージの仕様に合わせるために前後処理や変換レイヤーを自社側で追加開発する必要が生じ、導入コストが増大する。
+              </p>
+            </div>
+
+            <div className="bg-red-50 rounded-2xl p-6 border border-red-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white font-bold mb-4">
+                2
+              </div>
+              <h3 className="font-bold text-red-900 text-lg mb-2">
+                業務特化でないため精度が出ない
+              </h3>
+              <p className="text-sm text-red-900/80 leading-relaxed">
+                業界・業務特有の例外パターンや判断基準を扱えず、出力が「一般論」に留まり、現場で最後まで使える品質にならない。
+              </p>
+            </div>
+
+            <div className="bg-red-50 rounded-2xl p-6 border border-red-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white font-bold mb-4">
+                3
+              </div>
+              <h3 className="font-bold text-red-900 text-lg mb-2">
+                N+1問題：システムが増えて管理が複雑化
+              </h3>
+              <p className="text-sm text-red-900/80 leading-relaxed">
+                既存のN個の業務システムに加えて新しい1つのツールが増えるだけで、データ同期・管理・運用負荷がむしろ増加してしまう。
+              </p>
             </div>
           </div>
         </div>
@@ -94,4 +111,3 @@ export function Hero() {
     </section>
   );
 }
-

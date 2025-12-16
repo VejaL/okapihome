@@ -15,13 +15,13 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.png"
-            alt="Okapi Logo"
+            alt="オカピＡＩエージェント株式会社 ロゴ"
             width={32}
             height={32}
             className="rounded-full"
           />
           <span className="text-base font-bold tracking-wide text-neutral-900">
-            Okapi AI
+            オカピＡＩエージェント株式会社
           </span>
         </Link>
 

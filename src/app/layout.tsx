@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Okapi AI Agents | エンタープライズ向け AI エージェント構築",
+  title: "オカピＡＩエージェント株式会社 | エンタープライズ向け AI エージェント構築",
   description:
     "エンタープライズ向けに安全でスケーラブルな AI エージェント・RAG・業務自動化ソリューションを提供します。",
 };

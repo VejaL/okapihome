@@ -64,11 +64,11 @@ export const HERO_CONTENT = {
 
 // --- About (Mission) Section ---
 export const MISSION_CONTENT = {
-  title: "Okapiとは",
+  title: "オカピＡＩエージェント株式会社とは",
   mission: "人とAIが協働し、創造性の最大化を目指す社会をつくる",
   description: "AIは人の代わりではなく、最高の相棒となる存在です。",
   positioning:
-    "Okapi AI Agents は、既製品の AI パッケージではありません。お客様ごとの業務プロセス・既存システム・業界特性に合わせて設計する「フルカスタム型の AI エージェント / 業務自動化ソリューション」です。",
+    "オカピＡＩエージェント株式会社は、既製品の AI パッケージではありません。お客様ごとの業務プロセス・既存システム・業界特性に合わせて設計する「フルカスタム型の AI エージェント / 業務自動化ソリューション」を提供します。",
   features: [
     {
       title: "自律性",
@@ -241,7 +241,7 @@ export const PRICING_CONTENT = [
 // --- Contact Section ---
 export const CONTACT_CONTENT = {
   title: "人とAIが共に働く未来をつくる。",
-  subtitle: "Okapiは企業の知性を高め、成長を支えるAIエージェントです。",
+  subtitle: "オカピＡＩエージェント株式会社は企業の知性を高め、成長を支えるAIエージェントです。",
   cta: {
     text: "無料相談・デモの申し込み",
     subtext: "「何が自動化できるのか知りたい」だけでも歓迎です。お気軽にご相談ください。",

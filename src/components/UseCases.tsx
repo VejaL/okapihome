@@ -1,9 +1,13 @@
 import { USE_CASES_CONTENT } from "@/data/landing-page";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-export function UseCases() {
+export function UseCases({
+  backgroundClass = "bg-white",
+}: {
+  backgroundClass?: string;
+}) {
   return (
-    <section id="use-cases" className="py-24 bg-[#FAFAFA]">
+    <section id="use-cases" className={`py-24 ${backgroundClass}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle label="Use Cases" eyebrow="ユースケース" />
 
@@ -29,4 +33,3 @@ export function UseCases() {
     </section>
   );
 }
-

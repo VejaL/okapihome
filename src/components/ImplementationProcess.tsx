@@ -1,9 +1,13 @@
 import { IMPLEMENTATION_STEPS } from "@/data/landing-page";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-export function ImplementationProcess() {
+export function ImplementationProcess({
+  backgroundClass = "bg-white",
+}: {
+  backgroundClass?: string;
+}) {
   return (
-    <section id="process" className="py-24 bg-white">
+    <section id="process" className={`py-24 ${backgroundClass}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle label="Process" eyebrow="導入プロセス" />
 

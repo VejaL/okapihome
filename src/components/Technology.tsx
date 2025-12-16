@@ -1,9 +1,13 @@
 import { TECH_SECURITY_CONTENT } from "@/data/landing-page";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-export function Technology() {
+export function Technology({
+  backgroundClass = "bg-[#FAFAFA]",
+}: {
+  backgroundClass?: string;
+}) {
   return (
-    <section id="technology" className="py-24 bg-white">
+    <section id="technology" className={`py-24 ${backgroundClass}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle label="Technology & Security" eyebrow="技術・セキュリティ" />
 

@@ -1,9 +1,13 @@
 import { PRICING_CONTENT } from "@/data/landing-page";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-export function Pricing() {
+export function Pricing({
+  backgroundClass = "bg-[#FAFAFA]",
+}: {
+  backgroundClass?: string;
+}) {
   return (
-    <section id="pricing" className="py-24 bg-[#FAFAFA]">
+    <section id="pricing" className={`py-24 ${backgroundClass}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle label="Engagement Model" eyebrow="ご支援プラン" />
 

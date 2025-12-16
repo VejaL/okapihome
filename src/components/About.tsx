@@ -2,9 +2,16 @@ import Link from "next/link";
 import { MISSION_CONTENT, CONTACT_CONTENT } from "@/data/landing-page";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-export function About() {
+export function About({
+  backgroundClass = "bg-white",
+}: {
+  backgroundClass?: string;
+}) {
   return (
-    <section id="about" className="py-24 bg-white border-t border-neutral-100">
+    <section
+      id="about"
+      className={`py-24 border-t border-neutral-100 ${backgroundClass}`}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           <div>

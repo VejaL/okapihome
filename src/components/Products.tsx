@@ -1,6 +1,10 @@
-export function Products() {
+export function Products({
+  backgroundClass = "bg-[#FAFAFA]",
+}: {
+  backgroundClass?: string;
+}) {
   return (
-    <section id="products" className="py-24 bg-white">
+    <section id="products" className={`py-24 ${backgroundClass}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mb-12">

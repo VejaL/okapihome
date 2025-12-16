@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "オカピＡＩエージェント株式会社 | エンタープライズ向け AI エージェント構築",
   description:
     "エンタープライズ向けに安全でスケーラブルな AI エージェント・RAG・業務自動化ソリューションを提供します。",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { Products } from "@/components/Products";
 import { UseCases } from "@/components/UseCases";
 import { Technology } from "@/components/Technology";
-import { CaseStudies } from "@/components/CaseStudies";
 import { ImplementationProcess } from "@/components/ImplementationProcess";
 import { Pricing } from "@/components/Pricing";
 import { About, FinalCTA } from "@/components/About";
@@ -20,7 +19,7 @@ export default function HomePage() {
         <Products />
         <UseCases />
         <Technology />
-        <CaseStudies />
+        {/* <CaseStudies />  お客様事例セクション（一時的に非表示） */}
         <ImplementationProcess />
         <Pricing />
         <FinalCTA />

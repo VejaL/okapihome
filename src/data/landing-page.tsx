@@ -241,7 +241,7 @@ export const PRICING_CONTENT = [
 // --- Contact Section ---
 export const CONTACT_CONTENT = {
   title: "人とAIが共に働く未来をつくる。",
-  subtitle: "オカピＡＩエージェント株式会社は企業の知性を高め、成長を支えるAIエージェントです。",
+  subtitle: "オカピＡＩエージェント株式会社は企業の知性を高め、成長を支えるパートナーです。",
   cta: {
     text: "無料相談・デモの申し込み",
     subtext: "「何が自動化できるのか知りたい」だけでも歓迎です。お気軽にご相談ください。",

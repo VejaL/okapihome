@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "エンタープライズ向けに安全でスケーラブルな AI エージェント・RAG・業務自動化ソリューションを提供します。",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.svg",
   },
 };
 

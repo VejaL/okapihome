@@ -14,7 +14,7 @@ export function Header() {
         {/* logo + name */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="オカピＡＩエージェント株式会社 ロゴ"
             width={32}
             height={32}
